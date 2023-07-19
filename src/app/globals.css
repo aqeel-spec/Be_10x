@@ -4,13 +4,38 @@
 
 
 @layer components {
-    .btn {
+    /* .btn {
         @apply text-sm w-auto md:text-base bg-gradient-to-r from-[#FF512F] to-[#DD2476]  hover:from-[#DD2476] hover:to-[#FF512F]  transition  delay-150 duration-150 hover:-translate-y-2 hover:scale-100 text-white01 font-[16px] p-2 py-3 px-6 rounded-[3px]
-    }
-    .heading {
+    } */
+    /* .heading {
         @apply text-heading text-4xl md:text-5xl lg:text-6xl font-bold 
+    } */
+    .heading {
+        @apply text-xl md:text-2xl lg:text-3xl text-black_02 font-bold
+    }
+    .heading2 {
+        @apply text-xl text-black_02  font-bold
     }
     .para {
-        @apply text-black01 font-semibold
+        @apply text-black_02 
     }
+    .para2 {
+        @apply bg-black_04 px-4 py-2 text-black_02; 
+    }
+    .icon {
+        @apply w-14 h-14
+    }
+    .btn {
+        @apply hover:text-black_01 rounded-md hover:bg-gradient-to-r from-black_02 via-black_03 to-black_04 px-4 py-2 bg-black_04 text-black_02 my-2;
+    }
+    .cta {
+        @apply my-10
+    }
+    .star-rating {
+        @apply gap-2 flex text-center items-center mx-auto content-center justify-center
+    }
+    .form {
+        @apply border-[1px] border-black_04
+    }
+
 }

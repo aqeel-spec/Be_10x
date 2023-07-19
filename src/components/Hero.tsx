@@ -1,39 +1,81 @@
-import Link from 'next/link';
 import React from 'react';
-import { IoIosArrowDown } from 'react-icons/io';
+import Slider from './Slider';
+import {FaUserGraduate} from "react-icons/fa";
+import  { IoRocket } from 'react-icons/io5';
+import { SiMicrosoftteams } from 'react-icons/si';
+import Image from 'next/image';
+import Link from 'next/link';
 
 const Hero = () => {
   return (
-    <div className="w-auto min-h-screen flex justify-center items-center bg-black01">
-      <div className=" p-2 md:p-0 gap-y-5 flex flex-col items-center justify-between">
-        <h1 className="text-2xl md:text-3xl p-2 md:p-0 lg:text-4xl font-semibold text-white">Become a 10x Better Version of Yourself</h1>
-        <button className="btn mt-3">GO TO OUR AI TOOLS WORKSHOP</button>
-        <button className="btn mt-3 text-base md:text-sm">GO TO OUR MS OFFICE AI HACKS WORKSHOP</button>
+    <>
+      <Slider />
+      <div className="grid grid-cols-1 md:grid-cols-2 p-10 gap-4  ">
+        <div className=" space-y-2 p-4 m-2 items-center justify-items-center text-center ">
+            {/* Icon */}
+            <div className="bg-black_04 w-fit p-6 text-center items-center mx-auto rounded-full text-black_01">
+             <IoRocket className=' icon '/> 
+            </div>
+            <h1 className='text-2xl font-medium text-black_03'>Startups</h1>
+            {/* Description  */}
+            <p className=' para2 '>&quot;For Visionary Minds&quot; - Unlock the potential of your startup with our reliable backend
+                  API platform.
+            </p>
+            {/* Button */}
+            <Link href={`/startup`}>
+               <button className='btn'>Know more</button>
+            </Link>
+        </div>
+        <div className=" space-y-2 p-4 m-2 items-center justify-items-center text-center ">
+            {/* Icon */}
+            <div className="bg-black_04 w-fit p-6 text-center items-center mx-auto rounded-full text-black_01">
+             <FaUserGraduate className='icon '/> 
+            </div>
+            <h1 className='text-2xl font-medium text-black_03'>Students</h1>
+            {/* Description  */}
+            <p className=' para2 pb-4 '>&quot;Ignite Your Entrepreneurial Passion&quot; - Empowering students to embrace
+              entrepreneurship and become tomorrow&lsquo;s leaders.
+            </p>
+            {/* Button */}
+            <Link href={`/student`}>
+               <button className='btn'>Know more</button>
+            </Link>
+        </div>
+        {/* 2nd row of grids */}
+        <div className=" space-y-2 p-4 m-2 items-center justify-items-center text-center ">
+            {/* Icon */}
+            <div className="bg-black_04 w-fit p-6 text-center items-center mx-auto rounded-full text-black_01">
+            <Image src={`/workforce.png`} alt='Marketing Image' height={56} width={56} className='icon '/>
+            </div>
+            <h1 className='text-2xl font-medium text-black_03'>Working Professionals</h1>
+            {/* Description  */}
+            <p className=' para2 '>&quot;Accelerate Your Ideas&quot; - Turn your entrepreneurial ideas into reality
+              with our expert guidance.
+
+            </p>
+            {/* Button */}
+            <Link href={`/professionals`}>
+               <button className='btn'>Know more</button>
+            </Link>
+        </div>
+        <div className=" space-y-2 p-4 m-2 items-center justify-items-center text-center ">
+            {/* Icon */}
+            <div className="bg-black_04 w-fit p-6 text-center items-center mx-auto rounded-full text-black_01">
+             <Image src={`/growth.png`} alt='Marketing Image' height={56} width={56} className='icon '/> 
+            </div>
+            <h1 className='text-2xl font-medium text-black_03'>Sales and Marketing</h1>
+            {/* Description  */}
+            <p className=' para2 '>&quot;Winning Strategies for Growth&quot; - Supercharge your sales and marketing
+              efforts to reach new heights.
+
+            </p>
+            {/* Button */}
+            <Link href={`/marketing`}>
+               <button className='btn'>Know more</button>
+            </Link>
+        </div>
       </div>
-    </div>
-  );
-};
-
+    </>
+  )
+}
 export default Hero;
-
-
-// import React from 'react'
-// import { IoIosArrowDown } from 'react-icons/io'
-
-// const Hero = () => {
-//   return (
-//     <div className="w-auto   h-[450px] justify-center bg-black01  ">
-//       <div className=" mt-20 gap-y-5 m-auto flex flex-col items-center justify-between  ">
-//         <h1 className=' text-2xl md:text-4xl font-semibold text-white '>Become a 10x Better Version of Yourself</h1>
-//         <button className='btn mt-3'>
-//           GO TO OUR AI TOOLS WORKSHOP
-//         </button>
-//         <button className=' mt-3 btn text-base md:text-sm'>
-//           GO TO OUR MS OFFICE AI HACKS WORKSHOP
-//         </button>
-//       </div>
-//     </div>
-//   )
-// }
-
-// export default Hero

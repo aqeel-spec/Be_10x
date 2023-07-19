@@ -15,38 +15,28 @@ import {
 
 const menuLi = [
     {
-        name : "",
-        path : "",
-        list : [
-            {
-                name : "AI Tools Workshops",
-                path : "/ai-hm/"
-            },
-            {
-                name : "Office Hacks Workshops",
-                path : "/office-ai-hm/"
-            }
-        ]
-    },
-    {
-        name : "Contact Us",
-        path : "/contact-us/",
-    },
-    {
         name : "Blog",
         path : "/blog/"
     },
     {
-        name: "About Us",
-        path : "/about-us/"
+        name: "Refer & Earn",
+        path : "/refrence"
     },
     {
-        name : "Become an affiliate",
-        path : "/become-an-affiliate/"
+        name : "Contact Us",
+        path : "/contact-us",
+    },
+    {
+        name : "About Us",
+        path : "/about"
+    },
+    {
+        name : "Testimonial",
+        path : "/testimonial"
     },
     {
         name : "My Account",
-        path : "/"
+        path : "account"
     }
 ]
 
@@ -65,29 +55,12 @@ const NavBar = () => {
             <Link href={`/`}>
                 <Image src={`/logo.png`} alt='Logo' height={50} width={100} />
             </Link>
-        <ul className='md:flex hidden space-x-4 text-base text-nav leading-2'>
-            <div className="group relative cursor-pointer">
-                {/* Hover button */}
-                <div className="flex   items-center justify-between space-x-5  px-4">
-                    <a href="/#" className='flex items-center'>
-                        Workshops <span className='ml-1'><IoIosArrowDown /></span>
-                    </a>
-                </div>
-
-                {/* Dropdown menu list here */}
-                <div className="hidden top-6 left-4 transition delay-150 duration-300 ease-in-out border-t-2 border-orange absolute z-50 group-hover:flex w-[235px] flex-col bg-gray-100 py-1 px-4 text-gray-800 shadow-xl">
-                   {
-                        menuLi[0].list?.map((item) => (
-                            <a key={item.name} href={item.path} className='my-2 block border-b border-gray-100 py-1 font-semibold text-gray-500 hover:text-black md:mx-2'>{item.name}</a>
-                        ))
-                    }
-                </div>
-            </div>
+        <ul className='md:flex hidden space-x-4  text-base  leading-2'>
 
             {/* nav manu items */}
             {
                 menuLi.map((item) => (
-                    <li key={item.name}>
+                    <li key={item.name} className='hover:text-black_01 text-black_02 hover:font-bold transiton delay-150 duration-300 p-2 rounded-[4px] hover:bg-gray-100'>
                         <Link href={item.path}>{item.name}</Link>
                     </li>
                 ))
@@ -113,7 +86,7 @@ const NavBar = () => {
                             <div className=" p-3 max-w-[68vh] mx-auto">
                                 <nav>
                                     <ul className="  text-start space-y-2 text-nav ">
-                                    <Accordion type="single" collapsible>
+                                    {/* <Accordion type="single" collapsible>
                                         <AccordionItem value="item-1">
                                             <AccordionTrigger>Workshops</AccordionTrigger>
                                             <AccordionContent className='flex flex-col  '>
@@ -126,9 +99,9 @@ const NavBar = () => {
                                                </div>
                                             </AccordionContent>
                                         </AccordionItem>
-                                    </Accordion>
+                                    </Accordion> */}
                                         {menuLi.map((item) => (
-                                        <li onClick={handleChange} key={item.name} className='hover:text-black02 hover:font-bold transiton delay-150 duration-300 p-2 rounded-[4px] hover:bg-gray-100' >
+                                        <li onClick={handleChange} key={item.name} className='hover:text-black_01 text-black_02 hover:font-bold transiton delay-150 duration-300 p-2 rounded-[4px] hover:bg-gray-100' >
                                             <Link href={item.path}>{item.name}</Link>
                                         </li>
                                         ))}

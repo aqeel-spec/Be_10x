@@ -28,6 +28,10 @@ module.exports = {
         orange : "#ff9933",
         blue : "#0b5092",
         nav : "#4b4f58",
+        black_01 : "#010101",
+        black_02 : "#525252",
+        black_03 : "#A6A6A6",
+        black_04 : "#D9D9D9",
         
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
