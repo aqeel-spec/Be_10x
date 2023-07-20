@@ -1,8 +1,11 @@
 import React from 'react'
+import { NavigationMenuDopdown } from '@/components/NavigatioManu'
 
 const page = () => {
   return (
-    <div>page</div>
+    <div>
+      <NavigationMenuDopdown />
+    </div>
   )
 }
 

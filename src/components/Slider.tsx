@@ -25,7 +25,7 @@ const Slider: React.FC = () => {
   }, [currentSlide]);
 
   return (
-    <div id="default-carousel" className="relative w-full" data-carousel="slide">
+    <div id="default-carousel" className="relative  w-full" data-carousel="slide">
       {/* <!-- Carousel wrapper --> */}
       <div className="relative h-56  overflow-hidden rounded-lg md:h-96">
         {imgLi.map((item, index) => (
