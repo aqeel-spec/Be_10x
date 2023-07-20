@@ -7,7 +7,7 @@ import { Input } from "@/ui/input"
 import { Label } from "@/ui/label"
 import Link from 'next/link';
 
-const page = () => {
+const Checkout = () => {
     const [phone,setPhone] = useState<number | any>();
   return (
     <div className='min-h-screen py-4 text-black_02 max-w-xl p-2 md:p-4 md:max-w-2xl lg:max-w-3xl  m-auto justify-center  '>
@@ -68,4 +68,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Checkout
